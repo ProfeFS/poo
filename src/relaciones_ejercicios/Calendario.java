@@ -8,6 +8,7 @@ public class Calendario {
 
     public Calendario() {
         eventos = new ArrayList<>();
+        this.idioma = "ENG";
     }
     
     public Calendario(String idioma) { 
