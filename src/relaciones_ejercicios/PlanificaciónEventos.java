@@ -12,5 +12,6 @@ public class PlanificaciónEventos {
 
         // Mostrar eventos del calendario
         calendario.mostrarEventos();
+        calendario.imprimirCalendario();
     }
 }

@@ -7,11 +7,11 @@ public class Prestamo {
     private Libro libro;
     private Usuario usuario;
 
-    public Prestamo(Libro libro, Usuario usuario, Date fechaPrestamo, Date fechaDevolucion) {
+    public Prestamo(Libro libro, Usuario usuario, Date fechaPrestamo) {
         this.libro = libro;
         this.usuario = usuario;
         this.fechaPrestamo = fechaPrestamo;
-        this.fechaDevolucion = fechaDevolucion;
+        this.fechaDevolucion = null;
     }
 
   

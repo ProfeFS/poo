@@ -12,8 +12,8 @@ public class Biblioteca {
         Usuario usuario2 = new Usuario("Ana López", "AL5678");
 
         // Creación de préstamos
-        Prestamo prestamo1 = new Prestamo(libro1, usuario1, new Date(), null); 
-        Prestamo prestamo2 = new Prestamo(libro2, usuario2, new Date(), null); 
+        Prestamo prestamo1 = new Prestamo(libro1, usuario1, new Date()); 
+        Prestamo prestamo2 = new Prestamo(libro2, usuario2, new Date()); 
 
         // Mostrar detalles de los préstamos
         prestamo1.mostrarDetallePrestamo();
