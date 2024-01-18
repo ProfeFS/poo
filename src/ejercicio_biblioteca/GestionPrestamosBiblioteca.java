@@ -21,9 +21,11 @@ public class GestionPrestamosBiblioteca {
 		ArrayList<Libro> librosaPrestar = bibliotecaPlazaEliptica.generarListaLibrosaPrestar();		
 		bibliotecaPlazaEliptica.procesarNuevoPrestamo(librosaPrestar, maria);
 		
+		bibliotecaPlazaEliptica.imprimeLibros();
+		
 		bibliotecaPlazaEliptica.procesarDevolucion(maria.getDocumento(), LocalDate.of(2024, 1, 15));
 		
-		
+		bibliotecaPlazaEliptica.imprimeLibros();
 		
 
 	}

@@ -58,4 +58,10 @@ public class Biblioteca {
 
 	}
 
+	public void imprimeLibros() {
+		for(Libro libro : libros) {
+			System.out.println(libro);
+		}
+	}
+
 }
