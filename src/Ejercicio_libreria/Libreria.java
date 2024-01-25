@@ -6,20 +6,20 @@ import java.util.ArrayList;
 public class Libreria {
 
 	String nombre;
-	ArrayList<Libro> inventario;
+	ArrayList<Libro> ;
 
 	public Libreria(String nombre) {
 		this.nombre = nombre;
-		this.inventario = new ArrayList<>();
+		this.libros = new ArrayList<>();
 	}
 
 	public void registrarLibro(Libro ejemplar) {
-		inventario.add(ejemplar);
+		libros.add(ejemplar);
 	}
 
 	public ArrayList<Libro> getLibros(Categoria categoria) {
 		ArrayList<Libro> librosPorCategoria = new ArrayList<>();
-		for (Libro libro : inventario) {
+		for (Libro libro : libros) {
 			if (libro.getCategoria().equals(categoria)) {
 				librosPorCategoria.add(libro);
 			}
@@ -29,15 +29,15 @@ public class Libreria {
 	}
 	
 	public void actualizarStockLibro(Libro libro, int nuevoStock) {
-		for(Libro libroInventario: inventario) {
-			if(libro.equals(libroInventario)) {
-				libroInventario.setStock(nuevoStock);
+		for(Libro librolibros: libros) {
+			if(libro.equals(librolibros)) {
+				librolibros.setStock(nuevoStock);
 			}
 		}
 	}
 	
 	public void mostrarLibros(){
-		for(Libro libro: inventario) {
+		for(Libro libro: libros) {
 			System.out.println(libro);
 		}
 	}
@@ -45,7 +45,7 @@ public class Libreria {
 	private ArrayList<Libro> getLibrosConBajoStock(){
 		ArrayList<Libro> librosConBajoStock = new ArrayList<>();
 		
-		for(Libro libro: inventario) {
+		for(Libro libro: libros) {
 			if(libro.getStock() <3) {
 				librosConBajoStock.add(libro);
 			}
