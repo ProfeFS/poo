@@ -6,7 +6,7 @@ public class SistemaReservasRestaurante {
         Restaurante restaurante = new Restaurante("La Buena Mesa");
 
         // Agregar mesas
-        restaurante.agregarMesa(new Mesa(1, 4));
+        restaurante.agregarMesa(new Mesa(1, 1));
         
         restaurante.agregarMesa(new Mesa(2, 2));
 
@@ -15,6 +15,14 @@ public class SistemaReservasRestaurante {
         boolean resultado = restaurante.realizarReserva(fechaHoraReserva, 2, "Juan Pérez");
 
         if (resultado) {
+            System.out.println("Reserva realizada con éxito.");
+        } else {
+            System.out.println("No se pudo realizar la reserva.");
+        }
+        
+        
+        fechaHoraReserva = LocalDateTime.of(2024, 5, 10, 19, 0);
+        if (restaurante.realizarReserva(fechaHoraReserva, 2, "Juan Pérez")) {
             System.out.println("Reserva realizada con éxito.");
         } else {
             System.out.println("No se pudo realizar la reserva.");

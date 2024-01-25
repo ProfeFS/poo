@@ -19,7 +19,33 @@ public class Restaurante {
 	}
 
 	public boolean realizarReserva(LocalDateTime fechaHora, int numeroPersonas, String nombreCliente) {
+
 		Mesa mesaDisponible = encontrarMesaDisponible(numeroPersonas, fechaHora);
+		if (mesaDisponible != null) {
+			Reserva reserva = new Reserva(fechaHora, numeroPersonas, nombreCliente, mesaDisponible);
+			reservas.add(reserva);
+			return true;
+		}
+		return false;
+	}
+
+	public boolean realizarReserva2(LocalDateTime fechaHora, int numeroPersonas, String nombreCliente) {
+
+		Mesa mesaDisponible = null;
+		boolean estaMesaReservada = false;
+
+		for (Mesa mesa : mesas) {
+			for (Reserva reserva : reservas) {
+				if (reserva.getMesaAsignada().equals(mesa) && reserva.getFechaHora().equals(fechaHora)) {
+					estaMesaReservada = true;
+				}
+			}
+
+			if (mesa.getCapacidadMaxima() >= numeroPersonas && !estaMesaReservada) {
+				mesaDisponible = mesa;
+			}
+		}
+
 		if (mesaDisponible != null) {
 			Reserva reserva = new Reserva(fechaHora, numeroPersonas, nombreCliente, mesaDisponible);
 			reservas.add(reserva);
@@ -72,25 +98,23 @@ public class Restaurante {
 		}
 		return false;
 	}
-	
+
 	public void mostrarReservasPorFecha(LocalDateTime fecha) {
-	    for (Reserva reserva : reservas) {
-	        if (reserva.getFechaHora().toLocalDate().equals(fecha.toLocalDate())) {
-	            System.out.println("Reserva: " + reserva.getNombreCliente() + 
-	                               ", Mesa: " + reserva.getMesaAsignada().getNumero() +
-	                               ", Fecha y Hora: " + reserva.getFechaHora());
-	        }
-	    }
+		for (Reserva reserva : reservas) {
+			if (reserva.getFechaHora().toLocalDate().equals(fecha.toLocalDate())) {
+				System.out.println("Reserva: " + reserva.getNombreCliente() + ", Mesa: "
+						+ reserva.getMesaAsignada().getNumero() + ", Fecha y Hora: " + reserva.getFechaHora());
+			}
+		}
 	}
 
 	public void mostrarMesasDisponibles(LocalDateTime fechaHora) {
-	    for (Mesa mesa : mesas) {
-	        if (!estaMesaReservada(mesa, fechaHora)) {
-	            System.out.println("Mesa disponible: " + mesa.getNumero() + 
-	                               ", Capacidad: " + mesa.getCapacidadMaxima());
-	        }
-	    }
+		for (Mesa mesa : mesas) {
+			if (!estaMesaReservada(mesa, fechaHora)) {
+				System.out
+						.println("Mesa disponible: " + mesa.getNumero() + ", Capacidad: " + mesa.getCapacidadMaxima());
+			}
+		}
 	}
-
 
 }
