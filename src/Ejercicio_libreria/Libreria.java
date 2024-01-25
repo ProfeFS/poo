@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Libreria {
 
 	String nombre;
-	ArrayList<Libro> ;
+	ArrayList<Libro> libros;
 
 	public Libreria(String nombre) {
 		this.nombre = nombre;
