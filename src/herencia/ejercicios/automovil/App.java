@@ -20,7 +20,7 @@ public class App {
 		Coche miCoche = new Coche("Audi", "A1", LocalDate.of(2023, 1, 1), 5);
 		Motocicleta miMoto = new Motocicleta("Yamaha", "xx", LocalDate.of(2024, 1, 1), false);
 		
-		miCoche.mostrarInfo();
+		miCoche.mostrarInfor();
 		miMoto.mostrarInfo();
 
 	}

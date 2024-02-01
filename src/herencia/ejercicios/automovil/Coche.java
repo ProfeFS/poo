@@ -11,8 +11,8 @@ public class Coche extends Vehiculo {
 		this.numeroDePuertas = numeroDePuertas;
 	}
 
-	public void mostrarInfo() {
-		super.mostrarInfo();
+	public void mostrarInfor() {
+		mostrarInfo();
 		System.out.println(", Número de puertas: " + numeroDePuertas);
 	}
 
