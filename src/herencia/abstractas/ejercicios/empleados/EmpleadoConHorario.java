@@ -11,8 +11,17 @@ public abstract class EmpleadoConHorario extends Empleado {
 		this.tarifaPorHora = tarifaPorHora;
 	}
 
-	@Override
-	public double calcularSalario() {
-		return horasTrabajadas * tarifaPorHora;
+	public int getHorasTrabajadas() {
+		return horasTrabajadas;
 	}
+
+	public double getTarifaPorHora() {
+		return tarifaPorHora;
+	}
+
+//	@Override
+//	public double calcularSalario() {
+//		return horasTrabajadas * tarifaPorHora;
+//	}
+
 }
