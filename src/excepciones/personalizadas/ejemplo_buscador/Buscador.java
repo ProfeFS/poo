@@ -16,7 +16,7 @@ public class Buscador {
 	public Integer buscarPorIndice(int indice) throws ElementoNoEncontradoException, IndexOutOfBoundsException {
 		Integer elemento = elementos.get(indice);
 		if (elemento == null) { // Suponiendo que queremos tratar los elementos nulos como no encontrados
-			throw new ElementoNoEncontradoException("El elemento en el índice " + indice + " es nulo.");
+			throw new ElementoNoEncontradoException("No existe un elemento en el índice " + indice);
 		}
 		return elemento;
 
