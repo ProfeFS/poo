@@ -1,12 +1,6 @@
-package excepciones_ejemplos;
+package excepciones.ejemplos;
 
-public class GestionCuentas {
-
-	Calculadora calculadora;
-
-	public GestionCuentas() {
-		calculadora = new Calculadora();
-	}
+public class Calculadora {
 
 	public int calcularCuadrado(int numero) {
 		if (numero < 0) {
@@ -15,9 +9,14 @@ public class GestionCuentas {
 		}
 		return numero * numero;
 	}
-
-	public double dividir(int num, int den) {
-		return calculadora.dividir(num, den);
+	
+	public double dividir(int num, int den){
+		
+		if(den==0) {
+			throw new ArithmeticException("El denominador no puede ser cero: ->By Zero");
+		}
+		
+		return num/den;
 	}
 
 }

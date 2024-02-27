@@ -1,4 +1,4 @@
-package excepciones_ejemplos;
+package excepciones.ejemplos;
 
 public class PruebaExcepciones {
 
