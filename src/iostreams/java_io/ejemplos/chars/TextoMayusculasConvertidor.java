@@ -1,4 +1,4 @@
-package oistreams.ejemplos.chars;
+package iostreams.java_io.ejemplos.chars;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.BufferedWriter;
@@ -7,7 +7,10 @@ import java.io.IOException;
 
 public class TextoMayusculasConvertidor {
     public static void convertirTextoAMayusculas(String archivoOrigen, String archivoDestino) {
-        try (BufferedReader br = new BufferedReader(new FileReader(archivoOrigen));
+        
+    	//String archivoOrigen = "texto.txt";
+    	
+    	try (BufferedReader br = new BufferedReader(new FileReader(archivoOrigen));
              BufferedWriter bw = new BufferedWriter(new FileWriter(archivoDestino))) {
             
             String linea;

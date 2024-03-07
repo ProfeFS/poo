@@ -1,4 +1,4 @@
-package oistreams.ejemplos.binarios;
+package iostreams.java_io.ejemplos.binarios;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -23,7 +23,7 @@ public class ArchivoBinarioCopiador {
             
             int byteLeido;
             while ((byteLeido = fis.read()) != -1) {
-            	//System.out.println("El byteLeido: " + byteLeido);
+            	System.out.println("El byteLeido: " + byteLeido);
                 fos.write(byteLeido);
             }
             System.out.println("Archivo copiado exitosamente.");

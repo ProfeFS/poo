@@ -1,4 +1,4 @@
-package oistreams.ejemplos.binarios;
+package iostreams.java_io.ejemplos.binarios;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 
