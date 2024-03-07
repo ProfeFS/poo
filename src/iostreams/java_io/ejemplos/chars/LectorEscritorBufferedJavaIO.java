@@ -17,10 +17,8 @@ public class LectorEscritorBufferedJavaIO {
 
 		File file = new File(rutaDestino);
 
-		try (FileReader fr = new FileReader(rutaOrigen);
-				FileWriter fw = new FileWriter(file);
-				BufferedReader br = new BufferedReader(fr);
-				BufferedWriter bw = new BufferedWriter(fw)) {
+		try (BufferedReader br = new BufferedReader(new FileReader(rutaOrigen));
+				BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
 
 			String linea;
 			while ((linea = br.readLine()) != null) {
