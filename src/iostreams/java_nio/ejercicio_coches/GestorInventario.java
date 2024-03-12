@@ -48,10 +48,10 @@ public class GestorInventario {
 				System.out.println("Coche añadido: " + cocheStr);
 			}
 		} catch (RuntimeException e) {
-			System.out.println("Eror al añadir cochge: " + e);
+			System.out.println("Error al añadir coche: " + e);
 			e.printStackTrace();
 		} catch (IOException e) {
-			System.out.println("Eror al añadir cochge: " + e);
+			System.out.println("Error al añadir coche: " + e);
 			e.printStackTrace();
 		}
 
